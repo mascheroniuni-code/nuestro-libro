@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nuestro Libro ❤️</title>
+
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    background: #f2efe9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#book {
+    width: 600px;
+    height: 800px; /* proporción 3:4 */
+}
+</style>
+</head>
+<body>
+
+<div id="book"></div>
+
+<audio id="flipSound">
+    <source src="page-flip.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const pageFlip = new St.PageFlip(
+    document.getElementById("book"),
+    {
+        width: 500,
+        height: 650,
+        showCover: true,
+        maxShadowOpacity: 0.5
+    }
+);
+
+pageFlip.loadFromImages([
+   "pages/page1.jpg",
+   "pages/page2.jpg",
+   "pages/page3.jpg",
+   "pages/page4.jpg",
+   "pages/page5.jpg",
+   "pages/page6.jpg",
+   "pages/page7.jpg",
+   "pages/page8.jpg",
+   "pages/page9.jpg",
+   "pages/page10.jpg",
+   "pages/page11.jpg",
+   "pages/page12.jpg",
+   "pages/page13.jpg",
+   "pages/page14.jpg",
+   "pages/page15.jpg",
+   "pages/page16.jpg",
+   "pages/page17.jpg",
+   "pages/page18.jpg",
+   "pages/page19.jpg",
+   "pages/page20.jpg",
+   "pages/page21.jpg",
+   "pages/page22.jpg",
+   "pages/page23.jpg",
+   "pages/page24.jpg",
+   "pages/page25.jpg",
+   "pages/page26.jpg",
+   "pages/page27.jpg",
+   "pages/page28.jpg",
+   "pages/page29.jpg",
+   "pages/page30.jpg",
+   "pages/page31.jpg",
+   "pages/page32.jpg",
+   "pages/page33.jpg",
+   "pages/page34.jpg",
+   "pages/page35.jpg",
+   "pages/page36.jpg",
+   "pages/page37.jpg",
+   "pages/page38.jpg",
+   "pages/page39.jpg",
+   "pages/page40.jpg",
+   "pages/page41.jpg",
+   "pages/page42.jpg",
+   "pages/page43.jpg",
+   "pages/page44.jpg",
+   "pages/page45.jpg",
+   "pages/page46.jpg",
+   "pages/page47.jpg",
+   "pages/page48.jpg",
+   "pages/page49.jpg",
+   "pages/page50.jpg",
+   "pages/page51.jpg",
+   "pages/page52.jpg",
+   "pages/page53.jpg",
+   "pages/page54.jpg",
+   "pages/page55.jpg",
+   "pages/page56.jpg",
+   "pages/page57.jpg",
+   "pages/page58.jpg",
+   "pages/page59.jpg",
+   "pages/page60.jpg",
+   "pages/page61.jpg",
+   "pages/page62.jpg",
+   "pages/page63.jpg",
+   "pages/page64.jpg",
+   "pages/page65.jpg",
+   "pages/page66.jpg",
+   "pages/page67.jpg",
+   "pages/page68.jpg",
+   "pages/page69.jpg",
+   "pages/page70.jpg",
+   "pages/page71.jpg",
+   "pages/page72.jpg",
+   "pages/page73.jpg",
+   "pages/page74.jpg",
+   "pages/page75.jpg",
+   "pages/page76.jpg",
+   "pages/page77.jpg",
+   "pages/page78.jpg",
+   "pages/page79.jpg",
+   "pages/page80.jpg",
+   "pages/page81.jpg",
+   "pages/page82.jpg",
+   "pages/page83.jpg",
+   "pages/page84.jpg",
+   "pages/page85.jpg",
+   "pages/page86.jpg",
+   "pages/page87.jpg",
+   "pages/page88.jpg",
+   "pages/page89.jpg",
+   "pages/page90.jpg",
+   "pages/page91.jpg",
+   "pages/page92.jpg",
+   "pages/page93.jpg",
+   "pages/page94.jpg",
+   "pages/page95.jpg",
+   "pages/page96.jpg",
+   "pages/page97.jpg",
+   "pages/page98.jpg",
+   "pages/page99.jpg",
+   "pages/page100.jpg"
+]);
+
+const flipSound = document.getElementById("flipSound");
+
+pageFlip.on("flip", function () {
+    flipSound.currentTime = 0;
+    flipSound.play();
+});
+
+</script>
+
+</body>
+</html>
